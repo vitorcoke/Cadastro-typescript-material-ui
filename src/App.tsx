@@ -16,7 +16,6 @@ function App() {
         </BrowserRouter>
       </Drawerovider>
     </AppThemeProvider >
-
   );
 }
 export default App;

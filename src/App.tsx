@@ -1,8 +1,8 @@
 import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './routes';
 import MenuLateral from './shared/components/menu-lateral/MenuLateral';
-import { AppThemeProvider } from './shared/contexts/ThemeContext';
 import { Drawerovider } from './shared/contexts/DrawerContext';
+import { AppThemeProvider } from './shared/contexts/ThemeContext';
 
 
 function App() {
@@ -15,10 +15,8 @@ function App() {
           </MenuLateral>
         </BrowserRouter>
       </Drawerovider>
-
-    </AppThemeProvider>
+    </AppThemeProvider >
 
   );
 }
-
 export default App;

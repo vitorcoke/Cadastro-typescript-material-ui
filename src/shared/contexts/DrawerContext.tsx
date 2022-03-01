@@ -18,7 +18,7 @@ export const useDrawerContext = () => {
   return useContext(DrawerContext);
 };
 
-export const Drawerovider: React.FC = ({ children }) => {
+export const DraweProvider: React.FC = ({ children }) => {
 
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [drawerOptions, setDrawerOptions] = useState<IDrawerOptions[]>([]);
@@ -30,6 +30,7 @@ export const Drawerovider: React.FC = ({ children }) => {
   const handleSetDrawerOptions = useCallback((newDrawerOptions: IDrawerOptions[]) => {
     setDrawerOptions(newDrawerOptions);
   }, []);
+  
 
   return (
     <DrawerContext.Provider value={{ isDrawerOpen, toogleDrawerOpen, drawerOptions, setDrawerOptions: handleSetDrawerOptions }}>

@@ -34,6 +34,7 @@ const LayoutBasePage: React.FC<ILayoutBasePageProps> = ({ children, titulo, barr
           </IconButton>
         )}
 
+
         <Typography
           overflow='hidden'
           whiteSpace='nowrap'

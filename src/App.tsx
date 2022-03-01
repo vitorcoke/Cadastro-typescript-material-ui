@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './routes';
-import LateralMenu from './shared/components/menu-lateral/LateralMenu';
+import LateralMenu from './shared/components/lateral-menu/LateralMenu';
 import { DraweProvider } from './shared/contexts/DrawerContext';
 import { AppThemeProvider } from './shared/contexts/ThemeContext';
 

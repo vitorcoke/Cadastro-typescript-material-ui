@@ -2,6 +2,7 @@ import { Avatar, Divider, Drawer, Icon, List, ListItemButton, ListItemIcon, List
 import { Box } from '@mui/system';
 import { useDrawerContext } from '../../contexts/DrawerContext';
 import { useMatch, useNavigate, useResolvedPath } from 'react-router-dom';
+import { useAppThemeContext } from '../../contexts/ThemeContext';
 
 interface IListItemLinkProps {
   to: string,
@@ -36,6 +37,7 @@ const MenuLateral: React.FC = ({ children }) => {
   const theme = useTheme();
   const smDown = useMediaQuery(theme.breakpoints.down('sm'));
   const { isDrawerOpen, toogleDrawerOpen, drawerOptions } = useDrawerContext();
+  const { toogleTheme, themeName } = useAppThemeContext();
 
   return (
     <>
@@ -70,6 +72,16 @@ const MenuLateral: React.FC = ({ children }) => {
                   onClick={smDown ? toogleDrawerOpen : undefined}
                 />
               ))}
+            </List>
+          </Box>
+          <Box >
+            <List component='nav'>
+              <ListItemButton  onClick={toogleTheme}>
+                <ListItemIcon>
+                  <Icon>{themeName === 'dark' ?  'dark_mode' : 'light_mode'}</Icon>
+                </ListItemIcon>
+                <ListItemText primary="Alternar Tema" />
+              </ListItemButton>
             </List>
           </Box>
         </Box>

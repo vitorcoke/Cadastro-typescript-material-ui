@@ -3,20 +3,20 @@ import { Box } from '@mui/system';
 
 interface IToobarListProps {
   textoDabusca?: string,
-  mostrarInputBusca?: boolean,
-  aoMudarTextoDeBusca?: (novoTexto: string) => void,
   textoBotaoNovo?: string,
+  mostrarInputBusca?: boolean,
   mostrarBotaoNovo?: boolean,
+  aoMudarTextoDeBusca?: (novoTexto: string) => void,
   aoClicarEmNovo?: () => void
 }
 
 const ToolbarList: React.FC<IToobarListProps> = ({
   textoDabusca = '',
+  textoBotaoNovo = 'Novo',
   mostrarInputBusca = false,
-  aoMudarTextoDeBusca,
-  aoClicarEmNovo,
   mostrarBotaoNovo = true,
-  textoBotaoNovo = 'Novo'
+  aoClicarEmNovo,
+  aoMudarTextoDeBusca
 }) => {
 
   const theme = useTheme();

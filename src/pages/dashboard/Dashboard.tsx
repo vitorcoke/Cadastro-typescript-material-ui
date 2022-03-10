@@ -1,4 +1,4 @@
-import ToolbarList from '../../shared/components/toolbar-list/ToobarList';
+import ToolbarDetail from '../../shared/components/toolbar-detail/ToolbarDetail';
 import LayoutBasePage from '../../shared/layouts/LayoutBasePage';
 
 
@@ -6,13 +6,14 @@ const Dashboard = () => {
   return (
     <LayoutBasePage
       titulo='Pagina Inicial'
-      barraDeFerramentas={(<ToolbarList
-        mostrarInputBusca
-        textoBotaoNovo='Nova'
+      barraDeFerramentas={(<ToolbarDetail
+        mostrarBotaoSalvarFechar
+      
       />)}
     >
       Testando
     </LayoutBasePage>
+
   );
 };
 

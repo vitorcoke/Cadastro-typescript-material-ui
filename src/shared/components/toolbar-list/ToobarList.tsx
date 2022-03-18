@@ -1,5 +1,6 @@
 import { Button, Icon, Paper, TextField, useTheme } from '@mui/material';
 import { Box } from '@mui/system';
+import Enviroment from '../../environment';
 
 interface IToobarListProps {
   textoDabusca?: string,
@@ -34,7 +35,7 @@ const ToolbarList: React.FC<IToobarListProps> = ({
     >
       {mostrarInputBusca && (<TextField
         size='small'
-        placeholder='pesquisar...'
+        placeholder= {Enviroment.INPUT_DE_BUSCA}
         value={textoDabusca}
         onChange={(e) => aoMudarTextoDeBusca?.(e.target.value)}
       />)}
